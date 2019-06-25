@@ -1,0 +1,14 @@
+C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.csprojAssemblyReference.cache
+C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.Properties.Resources.resources
+C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.csproj.GenerateResource.cache
+C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.csproj.CoreCompileInputs.cache
+C:\Users\Adam\source\repos\TipManager\bin\Debug\TipManager.exe.config
+C:\Users\Adam\source\repos\TipManager\bin\Debug\TipManager.exe
+C:\Users\Adam\source\repos\TipManager\bin\Debug\TipManager.pdb
+C:\Users\Adam\source\repos\TipManager\bin\Debug\EntityFramework.dll
+C:\Users\Adam\source\repos\TipManager\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Adam\source\repos\TipManager\bin\Debug\EntityFramework.xml
+C:\Users\Adam\source\repos\TipManager\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.csproj.CopyComplete
+C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.exe
+C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.pdb
