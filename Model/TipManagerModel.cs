@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TipManager.Model
 {
-    public class TipManager
+    public class TipManagerModel
     {
         public double Total { get; set; }
         public double TotalMade { get; set; }
