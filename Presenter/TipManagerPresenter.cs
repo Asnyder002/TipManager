@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TipManager.Model;
+using TipManager.Services;
 using TipManager.View;
 
 namespace TipManager.Presenter
@@ -13,6 +14,8 @@ namespace TipManager.Presenter
         // Creates object from model
         TipManagerModel tipManager = new TipManagerModel();
 
+        TipManagerServices services;
+
         // Creates instance from interface
         private ITipManager tipManagerView;
 
@@ -20,10 +23,12 @@ namespace TipManager.Presenter
         public TipManagerPresenter(ITipManager view)
         {
             tipManagerView = view;
+            services = new TipManagerServices(tipManager);
         }
 
         public void DisplayTotal()
         {
+            services.passSumTotalToModel();
             tipManagerView.TxtTotal = tipManager.Total.ToString();
         }
 

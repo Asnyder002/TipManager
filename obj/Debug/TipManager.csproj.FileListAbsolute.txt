@@ -12,3 +12,4 @@ C:\Users\Adam\source\repos\TipManager\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.csproj.CopyComplete
 C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.exe
 C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.pdb
+C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.Form1.resources
