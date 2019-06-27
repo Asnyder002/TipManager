@@ -1,4 +1,3 @@
-C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.csprojAssemblyReference.cache
 C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.Properties.Resources.resources
 C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.csproj.GenerateResource.cache
 C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.csproj.CoreCompileInputs.cache
@@ -13,3 +12,4 @@ C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.csproj.CopyComplete
 C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.exe
 C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.pdb
 C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.Form1.resources
+C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.UserControls.Home.resources

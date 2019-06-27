@@ -30,40 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.totalLabel = new System.Windows.Forms.Label();
-            this.navPanel = new System.Windows.Forms.Panel();
             this.homeButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.subtractButton = new System.Windows.Forms.Button();
             this.analysisButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.navPanel.SuspendLayout();
+            this.navPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.navPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // totalLabel
             // 
             this.totalLabel.AutoSize = true;
-            this.totalLabel.Location = new System.Drawing.Point(382, 123);
+            this.totalLabel.Location = new System.Drawing.Point(247, 23);
             this.totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalLabel.Name = "totalLabel";
             this.totalLabel.Size = new System.Drawing.Size(35, 13);
             this.totalLabel.TabIndex = 0;
             this.totalLabel.Text = "label1";
-            // 
-            // navPanel
-            // 
-            this.navPanel.BackColor = System.Drawing.Color.LightSlateGray;
-            this.navPanel.Controls.Add(this.pictureBox1);
-            this.navPanel.Controls.Add(this.analysisButton);
-            this.navPanel.Controls.Add(this.subtractButton);
-            this.navPanel.Controls.Add(this.addButton);
-            this.navPanel.Controls.Add(this.homeButton);
-            this.navPanel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.navPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.navPanel.Location = new System.Drawing.Point(0, 0);
-            this.navPanel.Name = "navPanel";
-            this.navPanel.Size = new System.Drawing.Size(198, 457);
-            this.navPanel.TabIndex = 1;
             // 
             // homeButton
             // 
@@ -135,7 +120,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.MenuText;
+            this.pictureBox1.BackColor = System.Drawing.Color.DimGray;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
@@ -143,6 +128,21 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            // 
+            // navPanel
+            // 
+            this.navPanel.BackColor = System.Drawing.Color.LightSlateGray;
+            this.navPanel.Controls.Add(this.pictureBox1);
+            this.navPanel.Controls.Add(this.analysisButton);
+            this.navPanel.Controls.Add(this.subtractButton);
+            this.navPanel.Controls.Add(this.addButton);
+            this.navPanel.Controls.Add(this.homeButton);
+            this.navPanel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.navPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.navPanel.Location = new System.Drawing.Point(0, 0);
+            this.navPanel.Name = "navPanel";
+            this.navPanel.Size = new System.Drawing.Size(198, 457);
+            this.navPanel.TabIndex = 1;
             // 
             // Form1
             // 
@@ -157,8 +157,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.navPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.navPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,12 +167,12 @@
         #endregion
 
         private System.Windows.Forms.Label totalLabel;
-        private System.Windows.Forms.Panel navPanel;
         private System.Windows.Forms.Button homeButton;
-        private System.Windows.Forms.Button analysisButton;
-        private System.Windows.Forms.Button subtractButton;
         private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button subtractButton;
+        private System.Windows.Forms.Button analysisButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel navPanel;
     }
 }
 
