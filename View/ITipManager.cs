@@ -12,5 +12,6 @@ namespace TipManager.View
         string TxtTotalMade { get; set; }
         string TxtTotalSpent { get; set; }
         string TxtTotalHours { get; set; }
+
     }
 }

@@ -12,5 +12,6 @@ namespace TipManager.Model
         public double TotalMade { get; set; }
         public double TotalSpent { get; set; }
         public double TotalHours { get; set; }
+
     }
 }

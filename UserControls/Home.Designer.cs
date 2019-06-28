@@ -34,14 +34,24 @@
             this.totalSpentTxtLabel = new System.Windows.Forms.Label();
             this.totalMadeLabel = new System.Windows.Forms.Label();
             this.totalSpentLabel = new System.Windows.Forms.Label();
+            this.totalPanel = new System.Windows.Forms.Panel();
+            this.totalMadePanel = new System.Windows.Forms.Panel();
+            this.totalSpentPanel = new System.Windows.Forms.Panel();
+            this.totalHoursPanel = new System.Windows.Forms.Panel();
+            this.totalHoursTxtLabel = new System.Windows.Forms.Label();
+            this.totalHoursLabel = new System.Windows.Forms.Label();
+            this.totalPanel.SuspendLayout();
+            this.totalMadePanel.SuspendLayout();
+            this.totalSpentPanel.SuspendLayout();
+            this.totalHoursPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // totalTxtLabel
             // 
             this.totalTxtLabel.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalTxtLabel.Location = new System.Drawing.Point(3, 59);
+            this.totalTxtLabel.Location = new System.Drawing.Point(14, 17);
             this.totalTxtLabel.Name = "totalTxtLabel";
-            this.totalTxtLabel.Size = new System.Drawing.Size(530, 55);
+            this.totalTxtLabel.Size = new System.Drawing.Size(335, 55);
             this.totalTxtLabel.TabIndex = 0;
             this.totalTxtLabel.Text = "Total";
             this.totalTxtLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -49,9 +59,9 @@
             // totalLabel
             // 
             this.totalLabel.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLabel.Location = new System.Drawing.Point(3, 114);
+            this.totalLabel.Location = new System.Drawing.Point(7, 72);
             this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(530, 55);
+            this.totalLabel.Size = new System.Drawing.Size(342, 55);
             this.totalLabel.TabIndex = 1;
             this.totalLabel.Text = "$150.00";
             this.totalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -59,9 +69,9 @@
             // totalMadeTxtLabel
             // 
             this.totalMadeTxtLabel.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalMadeTxtLabel.Location = new System.Drawing.Point(10, 230);
+            this.totalMadeTxtLabel.Location = new System.Drawing.Point(3, 11);
             this.totalMadeTxtLabel.Name = "totalMadeTxtLabel";
-            this.totalMadeTxtLabel.Size = new System.Drawing.Size(255, 49);
+            this.totalMadeTxtLabel.Size = new System.Drawing.Size(243, 49);
             this.totalMadeTxtLabel.TabIndex = 2;
             this.totalMadeTxtLabel.Text = "Total Made";
             this.totalMadeTxtLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -69,9 +79,9 @@
             // totalSpentTxtLabel
             // 
             this.totalSpentTxtLabel.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalSpentTxtLabel.Location = new System.Drawing.Point(278, 230);
+            this.totalSpentTxtLabel.Location = new System.Drawing.Point(3, 11);
             this.totalSpentTxtLabel.Name = "totalSpentTxtLabel";
-            this.totalSpentTxtLabel.Size = new System.Drawing.Size(255, 49);
+            this.totalSpentTxtLabel.Size = new System.Drawing.Size(243, 49);
             this.totalSpentTxtLabel.TabIndex = 3;
             this.totalSpentTxtLabel.Text = "Total Spent";
             this.totalSpentTxtLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -79,36 +89,99 @@
             // totalMadeLabel
             // 
             this.totalMadeLabel.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalMadeLabel.Location = new System.Drawing.Point(10, 279);
+            this.totalMadeLabel.Location = new System.Drawing.Point(3, 60);
             this.totalMadeLabel.Name = "totalMadeLabel";
-            this.totalMadeLabel.Size = new System.Drawing.Size(255, 49);
+            this.totalMadeLabel.Size = new System.Drawing.Size(243, 49);
             this.totalMadeLabel.TabIndex = 4;
-            this.totalMadeLabel.Text = "Total Made";
+            this.totalMadeLabel.Text = "$300.00";
             this.totalMadeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // totalSpentLabel
             // 
             this.totalSpentLabel.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalSpentLabel.Location = new System.Drawing.Point(278, 279);
+            this.totalSpentLabel.Location = new System.Drawing.Point(3, 60);
             this.totalSpentLabel.Name = "totalSpentLabel";
-            this.totalSpentLabel.Size = new System.Drawing.Size(255, 49);
+            this.totalSpentLabel.Size = new System.Drawing.Size(243, 49);
             this.totalSpentLabel.TabIndex = 5;
-            this.totalSpentLabel.Text = "Total Spent";
+            this.totalSpentLabel.Text = "$150.00";
             this.totalSpentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // totalPanel
+            // 
+            this.totalPanel.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.totalPanel.Controls.Add(this.totalTxtLabel);
+            this.totalPanel.Controls.Add(this.totalLabel);
+            this.totalPanel.Location = new System.Drawing.Point(86, 40);
+            this.totalPanel.Name = "totalPanel";
+            this.totalPanel.Size = new System.Drawing.Size(361, 137);
+            this.totalPanel.TabIndex = 6;
+            // 
+            // totalMadePanel
+            // 
+            this.totalMadePanel.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.totalMadePanel.Controls.Add(this.totalMadeTxtLabel);
+            this.totalMadePanel.Controls.Add(this.totalMadeLabel);
+            this.totalMadePanel.Location = new System.Drawing.Point(13, 199);
+            this.totalMadePanel.Name = "totalMadePanel";
+            this.totalMadePanel.Size = new System.Drawing.Size(249, 129);
+            this.totalMadePanel.TabIndex = 7;
+            // 
+            // totalSpentPanel
+            // 
+            this.totalSpentPanel.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.totalSpentPanel.Controls.Add(this.totalSpentTxtLabel);
+            this.totalSpentPanel.Controls.Add(this.totalSpentLabel);
+            this.totalSpentPanel.Location = new System.Drawing.Point(268, 199);
+            this.totalSpentPanel.Name = "totalSpentPanel";
+            this.totalSpentPanel.Size = new System.Drawing.Size(249, 129);
+            this.totalSpentPanel.TabIndex = 5;
+            // 
+            // totalHoursPanel
+            // 
+            this.totalHoursPanel.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.totalHoursPanel.Controls.Add(this.totalHoursLabel);
+            this.totalHoursPanel.Controls.Add(this.totalHoursTxtLabel);
+            this.totalHoursPanel.Location = new System.Drawing.Point(107, 345);
+            this.totalHoursPanel.Name = "totalHoursPanel";
+            this.totalHoursPanel.Size = new System.Drawing.Size(328, 100);
+            this.totalHoursPanel.TabIndex = 8;
+            // 
+            // totalHoursTxtLabel
+            // 
+            this.totalHoursTxtLabel.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalHoursTxtLabel.Location = new System.Drawing.Point(48, 14);
+            this.totalHoursTxtLabel.Name = "totalHoursTxtLabel";
+            this.totalHoursTxtLabel.Size = new System.Drawing.Size(222, 38);
+            this.totalHoursTxtLabel.TabIndex = 0;
+            this.totalHoursTxtLabel.Text = "Total Hours";
+            this.totalHoursTxtLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // totalHoursLabel
+            // 
+            this.totalHoursLabel.AutoSize = true;
+            this.totalHoursLabel.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalHoursLabel.Location = new System.Drawing.Point(136, 52);
+            this.totalHoursLabel.Name = "totalHoursLabel";
+            this.totalHoursLabel.Size = new System.Drawing.Size(51, 35);
+            this.totalHoursLabel.TabIndex = 1;
+            this.totalHoursLabel.Text = "25";
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Controls.Add(this.totalSpentLabel);
-            this.Controls.Add(this.totalMadeLabel);
-            this.Controls.Add(this.totalSpentTxtLabel);
-            this.Controls.Add(this.totalMadeTxtLabel);
-            this.Controls.Add(this.totalLabel);
-            this.Controls.Add(this.totalTxtLabel);
+            this.Controls.Add(this.totalHoursPanel);
+            this.Controls.Add(this.totalSpentPanel);
+            this.Controls.Add(this.totalMadePanel);
+            this.Controls.Add(this.totalPanel);
             this.Name = "Home";
             this.Size = new System.Drawing.Size(536, 457);
+            this.totalPanel.ResumeLayout(false);
+            this.totalMadePanel.ResumeLayout(false);
+            this.totalSpentPanel.ResumeLayout(false);
+            this.totalHoursPanel.ResumeLayout(false);
+            this.totalHoursPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -116,10 +189,17 @@
         #endregion
 
         private System.Windows.Forms.Label totalTxtLabel;
-        private System.Windows.Forms.Label totalLabel;
+        public System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.Label totalMadeTxtLabel;
         private System.Windows.Forms.Label totalSpentTxtLabel;
-        private System.Windows.Forms.Label totalMadeLabel;
-        private System.Windows.Forms.Label totalSpentLabel;
+        public System.Windows.Forms.Label totalMadeLabel;
+        public System.Windows.Forms.Label totalSpentLabel;
+        private System.Windows.Forms.Panel totalPanel;
+        private System.Windows.Forms.Panel totalMadePanel;
+        private System.Windows.Forms.Panel totalSpentPanel;
+        private System.Windows.Forms.Panel totalHoursPanel;
+        public System.Windows.Forms.Label totalHoursLabel;
+        private System.Windows.Forms.Label totalHoursTxtLabel;
+
     }
 }

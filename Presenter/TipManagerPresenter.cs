@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using TipManager.Model;
 using TipManager.Services;
 using TipManager.View;
+using TipManager.UserControls;
+using System.Windows.Forms;
 
 namespace TipManager.Presenter
 {
@@ -29,7 +31,8 @@ namespace TipManager.Presenter
         public void DisplayTotal()
         {
             services.passSumTotalToModel();
-            tipManagerView.TxtTotal = tipManager.Total.ToString();
+            tipManagerView.TxtTotal = "$" + tipManager.Total.ToString();
+            
         }
 
         public void DisplayTotalMade()
@@ -46,5 +49,6 @@ namespace TipManager.Presenter
         {
             tipManagerView.TxtTotalHours = tipManager.TotalHours.ToString();
         }
+
     }
 }

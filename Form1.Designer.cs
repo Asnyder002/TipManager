@@ -29,26 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.totalLabel = new System.Windows.Forms.Label();
             this.homeButton = new System.Windows.Forms.Button();
             this.addButton = new System.Windows.Forms.Button();
             this.subtractButton = new System.Windows.Forms.Button();
             this.analysisButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.navPanel = new System.Windows.Forms.Panel();
+            this.homeControl = new TipManager.UserControls.Home();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.navPanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // totalLabel
-            // 
-            this.totalLabel.AutoSize = true;
-            this.totalLabel.Location = new System.Drawing.Point(247, 23);
-            this.totalLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(35, 13);
-            this.totalLabel.TabIndex = 0;
-            this.totalLabel.Text = "label1";
             // 
             // homeButton
             // 
@@ -144,35 +134,42 @@
             this.navPanel.Size = new System.Drawing.Size(198, 457);
             this.navPanel.TabIndex = 1;
             // 
+            // homeControl
+            // 
+            this.homeControl.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.homeControl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.homeControl.Location = new System.Drawing.Point(198, 0);
+            this.homeControl.Name = "homeControl";
+            this.homeControl.Size = new System.Drawing.Size(536, 457);
+            this.homeControl.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(734, 457);
+            this.Controls.Add(this.homeControl);
             this.Controls.Add(this.navPanel);
-            this.Controls.Add(this.totalLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.navPanel.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button subtractButton;
         private System.Windows.Forms.Button analysisButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel navPanel;
+        private UserControls.Home homeControl;
     }
 }
 
