@@ -12,10 +12,10 @@ using TipManager.Presenter;
 
 namespace TipManager.UserControls
 {
-    public partial class Home : UserControl, ITipManager
+    public partial class Home : UserControl, IHome
     {
 
-        private TipManagerPresenter presenter;
+        private HomePresenter presenter;
 
         public Home()
         {
@@ -29,7 +29,7 @@ namespace TipManager.UserControls
 
         private void Home_Load(object sender, EventArgs e)
         {
-            presenter = new TipManagerPresenter(this);
+            presenter = new HomePresenter(this);
             presenter.DisplayTotal();
         }
     }
