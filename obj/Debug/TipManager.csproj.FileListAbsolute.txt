@@ -13,3 +13,4 @@ C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.exe
 C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.pdb
 C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.Form1.resources
 C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.UserControls.Home.resources
+C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.csprojAssemblyReference.cache

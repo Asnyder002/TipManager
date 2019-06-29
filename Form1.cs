@@ -34,7 +34,7 @@ namespace TipManager
         private void Form1_Load(object sender, EventArgs e)
         {
             presenter = new TipManagerPresenter(this);
-            presenter.DisplayTotal();
+            //presenter.DisplayTotal();
         }
 
     }
