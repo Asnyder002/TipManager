@@ -190,16 +190,16 @@
         #endregion
 
         private System.Windows.Forms.Label totalTxtLabel;
-        public System.Windows.Forms.Label totalLabel;
+        private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.Label totalMadeTxtLabel;
         private System.Windows.Forms.Label totalSpentTxtLabel;
-        public System.Windows.Forms.Label totalMadeLabel;
-        public System.Windows.Forms.Label totalSpentLabel;
+        private System.Windows.Forms.Label totalMadeLabel;
+        private System.Windows.Forms.Label totalSpentLabel;
         private System.Windows.Forms.Panel totalPanel;
         private System.Windows.Forms.Panel totalMadePanel;
         private System.Windows.Forms.Panel totalSpentPanel;
         private System.Windows.Forms.Panel totalHoursPanel;
-        public System.Windows.Forms.Label totalHoursLabel;
+        private System.Windows.Forms.Label totalHoursLabel;
         private System.Windows.Forms.Label totalHoursTxtLabel;
 
        
