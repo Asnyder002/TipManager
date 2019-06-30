@@ -15,6 +15,7 @@ namespace TipManager.UserControls
     public partial class Home : UserControl, IHome
     {
 
+        
         private HomePresenter presenter;
 
         public Home()

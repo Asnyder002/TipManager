@@ -26,6 +26,8 @@ namespace TipManager.Presenter
             services = new TipManagerServices(tipManager);
         }
 
+        // Calls servies method to get total to the model and then sets that total from model
+        // to the view.
         public void DisplayTotal()
         {
             services.passSumTotalToModel();
