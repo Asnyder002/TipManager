@@ -11,5 +11,15 @@
   </EntityType>
   <EntityContainer Name="TipManagerDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Deposits" EntityType="Self.Deposit" />
+    <EntitySet Name="Transactions" EntityType="TipManagerDBModel.Transaction" />
   </EntityContainer>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+    </Key>
+    <Property Name="TransactionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransactionAmount" Type="Decimal" Nullable="false" Precision="6" Scale="2" />
+    <Property Name="TransactionDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="TransactionName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

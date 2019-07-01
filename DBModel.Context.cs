@@ -26,5 +26,6 @@ namespace TipManager
         }
     
         public virtual DbSet<Deposit> Deposits { get; set; }
+        public virtual DbSet<Transaction> Transactions { get; set; }
     }
 }

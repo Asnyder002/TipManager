@@ -9,7 +9,17 @@
     <Property Name="DepoistDate" Type="date" Nullable="false" />
     <Property Name="HoursWorked" Type="float" Nullable="false" />
   </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+    </Key>
+    <Property Name="TransactionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TransactionAmount" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="TransactionDate" Type="date" Nullable="false" />
+    <Property Name="TransactionName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityContainer Name="TipManagerDBModelStoreContainer">
     <EntitySet Name="Deposit" EntityType="Self.Deposit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transaction" EntityType="Self.Transaction" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>
