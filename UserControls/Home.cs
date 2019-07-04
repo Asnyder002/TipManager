@@ -14,13 +14,20 @@ namespace TipManager.UserControls
 {
     public partial class Home : UserControl, IHome
     {
-
-        
-        private HomePresenter presenter;
+        //private HomePresenter presenter;
 
         public Home()
         {
             InitializeComponent();
+            new HomePresenter(this);
+            
+        }
+        private void Home_Load(object sender, EventArgs e)
+        {
+            //presenter = new HomePresenter(this);
+            //presenter.DisplayTotal();
+            EventHandler handler = homeLoaded;
+            handler?.Invoke(this, e);
         }
 
         public string TxtTotal { get => totalLabel.Text; set => totalLabel.Text = value; }
@@ -28,10 +35,8 @@ namespace TipManager.UserControls
         public string TxtTotalSpent { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string TxtTotalHours { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-        private void Home_Load(object sender, EventArgs e)
-        {
-            presenter = new HomePresenter(this);
-            presenter.DisplayTotal();
-        }
+        public event EventHandler homeLoaded;
+
+        
     }
 }

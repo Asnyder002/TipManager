@@ -8,6 +8,8 @@ namespace TipManager.View
 {
     interface IHome
     {
+        event EventHandler homeLoaded;
+
         string TxtTotal { get; set; }
         string TxtTotalMade { get; set; }
         string TxtTotalSpent { get; set; }

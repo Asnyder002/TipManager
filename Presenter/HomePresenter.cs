@@ -11,43 +11,45 @@ namespace TipManager.Presenter
 {
     class HomePresenter
     {
-        // Creates object from model
         TipManagerModel tipManager = new TipManagerModel();
 
         TipManagerServices services;
 
-        // Creates instance from interface
-        private IHome homwView;
+        private IHome homeView;
 
-        // Constructor
         public HomePresenter(IHome view)
         {
-            homwView = view;
+            homeView = view;
             services = new TipManagerServices(tipManager);
+            homeView.homeLoaded += new EventHandler(OnHomeLoaded);
         }
 
-        // Calls servies method to get total to the model and then sets that total from model
-        // to the view.
+        public void OnHomeLoaded(object sender, EventArgs e)
+        {
+            DisplayTotal();
+        }
+
         public void DisplayTotal()
         {
             services.passSumTotalToModel();
-            homwView.TxtTotal = "$" + tipManager.Total.ToString();
+            homeView.TxtTotal = "$" + tipManager.Total.ToString();
 
         }
 
         public void DisplayTotalMade()
         {
-            homwView.TxtTotalMade = tipManager.TotalMade.ToString();
+            homeView.TxtTotalMade = tipManager.TotalMade.ToString();
         }
 
         public void DisplayTotalSpent()
         {
-            homwView.TxtTotalSpent = tipManager.TotalSpent.ToString();
+            homeView.TxtTotalSpent = tipManager.TotalSpent.ToString();
         }
 
         public void DisplayTotalHours()
         {
-            homwView.TxtTotalHours = tipManager.TotalHours.ToString();
+            homeView.TxtTotalHours = tipManager.TotalHours.ToString();
         }
+
     }
 }
