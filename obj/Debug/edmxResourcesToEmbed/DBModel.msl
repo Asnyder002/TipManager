@@ -14,10 +14,10 @@
     <EntitySetMapping Name="Withdraws">
       <EntityTypeMapping TypeName="TipManagerDBModel.Withdraw">
         <MappingFragment StoreEntitySet="Withdraw">
-          <ScalarProperty Name="WithdrawName" ColumnName="WithdrawName" />
-          <ScalarProperty Name="WithdrawDate" ColumnName="WithdrawDate" />
-          <ScalarProperty Name="WithdrawAmount" ColumnName="WithdrawAmount" />
           <ScalarProperty Name="WithdrawID" ColumnName="WithdrawID" />
+          <ScalarProperty Name="WithdrawAmount" ColumnName="WithdrawAmount" />
+          <ScalarProperty Name="WithdrawDate" ColumnName="WithdrawDate" />
+          <ScalarProperty Name="WithdrawName" ColumnName="WithdrawName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

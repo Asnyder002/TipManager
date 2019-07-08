@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="81663faa7d4e4d959b5532d60abee927" Name="Diagram1">
+      <Diagram DiagramId="e31cd6774ff14b5b960b2280ec7db11d" Name="Diagram1">
         <EntityTypeShape EntityType="TipManagerDBModel.Deposit" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TipManagerDBModel.Withdraw" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TipManagerDBModel.Withdraw" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

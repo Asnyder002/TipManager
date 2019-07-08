@@ -9,17 +9,17 @@
     <Property Name="DepoistDate" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="HoursWorked" Type="Double" Nullable="false" />
   </EntityType>
-  <EntityContainer Name="TipManagerDBEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Deposits" EntityType="Self.Deposit" />
-    <EntitySet Name="Withdraws" EntityType="TipManagerDBModel.Withdraw" />
-  </EntityContainer>
   <EntityType Name="Withdraw">
     <Key>
       <PropertyRef Name="WithdrawID" />
     </Key>
     <Property Name="WithdrawID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="WithdrawAmount" Type="Decimal" Nullable="false" Precision="6" Scale="2" />
+    <Property Name="WithdrawAmount" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
     <Property Name="WithdrawDate" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="WithdrawName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="WithdrawName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
   </EntityType>
+  <EntityContainer Name="TipManagerDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Deposits" EntityType="Self.Deposit" />
+    <EntitySet Name="Withdraws" EntityType="Self.Withdraw" />
+  </EntityContainer>
 </Schema>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="TipManagerDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="TipManagerDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Deposit">
           <Key>
             <PropertyRef Name="DepositID" />
@@ -27,7 +27,8 @@
           <EntitySet Name="Deposit" EntityType="Self.Deposit" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Withdraw" EntityType="Self.Withdraw" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TipManagerDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -40,19 +41,19 @@
           <Property Name="DepoistDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="HoursWorked" Type="Double" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="TipManagerDBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Deposits" EntityType="Self.Deposit" />
-          <EntitySet Name="Withdraws" EntityType="TipManagerDBModel.Withdraw" />
-        </EntityContainer>
         <EntityType Name="Withdraw">
           <Key>
             <PropertyRef Name="WithdrawID" />
           </Key>
           <Property Name="WithdrawID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="WithdrawAmount" Type="Decimal" Nullable="false" Precision="6" Scale="2" />
+          <Property Name="WithdrawAmount" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
           <Property Name="WithdrawDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="WithdrawName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WithdrawName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
+        <EntityContainer Name="TipManagerDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Deposits" EntityType="Self.Deposit" />
+          <EntitySet Name="Withdraws" EntityType="Self.Withdraw" />
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -72,10 +73,10 @@
           <EntitySetMapping Name="Withdraws">
             <EntityTypeMapping TypeName="TipManagerDBModel.Withdraw">
               <MappingFragment StoreEntitySet="Withdraw">
-              <ScalarProperty Name="WithdrawName" ColumnName="WithdrawName" />
-                <ScalarProperty Name="WithdrawDate" ColumnName="WithdrawDate" />
-                <ScalarProperty Name="WithdrawAmount" ColumnName="WithdrawAmount" />
                 <ScalarProperty Name="WithdrawID" ColumnName="WithdrawID" />
+                <ScalarProperty Name="WithdrawAmount" ColumnName="WithdrawAmount" />
+                <ScalarProperty Name="WithdrawDate" ColumnName="WithdrawDate" />
+                <ScalarProperty Name="WithdrawName" ColumnName="WithdrawName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
