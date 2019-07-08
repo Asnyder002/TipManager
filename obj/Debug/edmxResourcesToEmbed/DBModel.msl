@@ -11,13 +11,13 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Transactions">
-      <EntityTypeMapping TypeName="TipManagerDBModel.Transaction">
-        <MappingFragment StoreEntitySet="Transaction">
-          <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
-          <ScalarProperty Name="TransactionAmount" ColumnName="TransactionAmount" />
-          <ScalarProperty Name="TransactionDate" ColumnName="TransactionDate" />
-          <ScalarProperty Name="TransactionName" ColumnName="TransactionName" />
+    <EntitySetMapping Name="Withdraws">
+      <EntityTypeMapping TypeName="TipManagerDBModel.Withdraw">
+        <MappingFragment StoreEntitySet="Withdraw">
+          <ScalarProperty Name="WithdrawName" ColumnName="WithdrawName" />
+          <ScalarProperty Name="WithdrawDate" ColumnName="WithdrawDate" />
+          <ScalarProperty Name="WithdrawAmount" ColumnName="WithdrawAmount" />
+          <ScalarProperty Name="WithdrawID" ColumnName="WithdrawID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -38,7 +38,7 @@
             this.totalMadePanel = new System.Windows.Forms.Panel();
             this.totalSpentPanel = new System.Windows.Forms.Panel();
             this.totalHoursPanel = new System.Windows.Forms.Panel();
-            this.totalHoursLabel = new System.Windows.Forms.Label();
+            this.totalHoursWorkedLabel = new System.Windows.Forms.Label();
             this.totalHoursTxtLabel = new System.Windows.Forms.Label();
             this.totalPanel.SuspendLayout();
             this.totalMadePanel.SuspendLayout();
@@ -139,22 +139,22 @@
             // totalHoursPanel
             // 
             this.totalHoursPanel.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.totalHoursPanel.Controls.Add(this.totalHoursLabel);
+            this.totalHoursPanel.Controls.Add(this.totalHoursWorkedLabel);
             this.totalHoursPanel.Controls.Add(this.totalHoursTxtLabel);
             this.totalHoursPanel.Location = new System.Drawing.Point(107, 345);
             this.totalHoursPanel.Name = "totalHoursPanel";
             this.totalHoursPanel.Size = new System.Drawing.Size(328, 100);
             this.totalHoursPanel.TabIndex = 8;
             // 
-            // totalHoursLabel
+            // totalHoursWorkedLabel
             // 
-            this.totalHoursLabel.AutoSize = true;
-            this.totalHoursLabel.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalHoursLabel.Location = new System.Drawing.Point(136, 52);
-            this.totalHoursLabel.Name = "totalHoursLabel";
-            this.totalHoursLabel.Size = new System.Drawing.Size(51, 35);
-            this.totalHoursLabel.TabIndex = 1;
-            this.totalHoursLabel.Text = "25";
+            this.totalHoursWorkedLabel.AutoSize = true;
+            this.totalHoursWorkedLabel.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalHoursWorkedLabel.Location = new System.Drawing.Point(136, 52);
+            this.totalHoursWorkedLabel.Name = "totalHoursWorkedLabel";
+            this.totalHoursWorkedLabel.Size = new System.Drawing.Size(51, 35);
+            this.totalHoursWorkedLabel.TabIndex = 1;
+            this.totalHoursWorkedLabel.Text = "25";
             // 
             // totalHoursTxtLabel
             // 
@@ -199,7 +199,7 @@
         private System.Windows.Forms.Panel totalMadePanel;
         private System.Windows.Forms.Panel totalSpentPanel;
         private System.Windows.Forms.Panel totalHoursPanel;
-        private System.Windows.Forms.Label totalHoursLabel;
+        private System.Windows.Forms.Label totalHoursWorkedLabel;
         private System.Windows.Forms.Label totalHoursTxtLabel;
 
        

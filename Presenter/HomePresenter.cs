@@ -27,27 +27,33 @@ namespace TipManager.Presenter
         public void OnHomeLoaded(object sender, EventArgs e)
         {
             DisplayTotal();
+            DisplayTotalMade();
+            DisplayTotalSpent();
+            DisplayTotalHoursWorked();
         }
 
         public void DisplayTotal()
         {
-            services.passSumTotalToModel();
+            services.passTotalToModel();
             homeView.TxtTotal = "$" + tipManager.Total.ToString();
 
         }
 
         public void DisplayTotalMade()
         {
-            homeView.TxtTotalMade = tipManager.TotalMade.ToString();
+            services.passTotalMadeToModel();
+            homeView.TxtTotalMade = "$" + tipManager.TotalMade.ToString();
         }
 
         public void DisplayTotalSpent()
         {
-            homeView.TxtTotalSpent = tipManager.TotalSpent.ToString();
+            services.passTotalSpentToModel();
+            homeView.TxtTotalSpent = "$" + tipManager.TotalSpent.ToString();
         }
 
-        public void DisplayTotalHours()
+        public void DisplayTotalHoursWorked()
         {
+            services.passTotalHoursWorkedToModel();
             homeView.TxtTotalHours = tipManager.TotalHours.ToString();
         }
 

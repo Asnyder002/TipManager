@@ -12,11 +12,11 @@ namespace TipManager
     using System;
     using System.Collections.Generic;
     
-    public partial class Transaction
+    public partial class Withdraw
     {
-        public int TransactionID { get; set; }
-        public decimal TransactionAmount { get; set; }
-        public System.DateTime TransactionDate { get; set; }
-        public string TransactionName { get; set; }
+        public int WithdrawID { get; set; }
+        public decimal WithdrawAmount { get; set; }
+        public System.DateTime WithdrawDate { get; set; }
+        public string WithdrawName { get; set; }
     }
 }

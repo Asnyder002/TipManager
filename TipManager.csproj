@@ -86,9 +86,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Repository.cs" />
     <Compile Include="Services\TipManagerServices.cs" />
-    <Compile Include="Transaction.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -97,6 +94,9 @@
     </Compile>
     <Compile Include="View\IHome.cs" />
     <Compile Include="View\ITipManager.cs" />
+    <Compile Include="Withdraw.cs">
+      <DependentUpon>DBModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

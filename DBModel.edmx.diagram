@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="81663faa7d4e4d959b5532d60abee927" Name="Diagram1">
         <EntityTypeShape EntityType="TipManagerDBModel.Deposit" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TipManagerDBModel.Transaction" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TipManagerDBModel.Withdraw" Width="1.5" PointX="0.75" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

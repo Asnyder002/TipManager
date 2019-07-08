@@ -17,9 +17,24 @@ namespace TipManager.Services
             this.tipManager = tipManager;
         }
 
-        public void passSumTotalToModel()
+        public void passTotalToModel()
         {
-            tipManager.Total = repo.GetSumOfDeposits();
+            tipManager.Total = repo.GetTotal();
+        }
+
+        public void passTotalMadeToModel()
+        {
+            tipManager.TotalMade = repo.GetTotalMade();
+        }
+
+        public void passTotalSpentToModel()
+        {
+            tipManager.TotalSpent = repo.GetTotalSpent();
+        }
+
+        public void passTotalHoursWorkedToModel()
+        {
+            tipManager.TotalHours = repo.GetTotalHoursWorked();
         }
     }
 }
