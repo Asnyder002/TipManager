@@ -36,6 +36,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.navPanel = new System.Windows.Forms.Panel();
             this.homeControl = new TipManager.UserControls.Home();
+            this.addTip1 = new TipManager.UserControls.AddTip();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.navPanel.SuspendLayout();
             this.SuspendLayout();
@@ -142,6 +143,19 @@
             this.homeControl.Name = "homeControl";
             this.homeControl.Size = new System.Drawing.Size(536, 457);
             this.homeControl.TabIndex = 2;
+            this.homeControl.TxtTotal = "$-250";
+            this.homeControl.TxtTotalHours = "20";
+            this.homeControl.TxtTotalMade = "$1500";
+            this.homeControl.TxtTotalSpent = "$1750";
+            // 
+            // addTip1
+            // 
+            this.addTip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.addTip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.addTip1.Location = new System.Drawing.Point(198, 0);
+            this.addTip1.Name = "addTip1";
+            this.addTip1.Size = new System.Drawing.Size(536, 457);
+            this.addTip1.TabIndex = 3;
             // 
             // Form1
             // 
@@ -149,6 +163,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(734, 457);
+            this.Controls.Add(this.addTip1);
             this.Controls.Add(this.homeControl);
             this.Controls.Add(this.navPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -169,6 +184,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel navPanel;
         private UserControls.Home homeControl;
+        private UserControls.AddTip addTip1;
     }
 }
 
