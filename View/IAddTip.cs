@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace TipManager.View
 {
-    interface ITipManager
+    interface IAddTip
     {
-
     }
 }

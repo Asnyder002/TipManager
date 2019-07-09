@@ -13,6 +13,12 @@ namespace TipManager.Presenter
 {
     class TipManagerPresenter
     {
-       
+        private ITipManager tipManagerView;
+
+        public TipManagerPresenter(ITipManager view)
+        {
+            tipManagerView = view;
+        }
+
     }
 }

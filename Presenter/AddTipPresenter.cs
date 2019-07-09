@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TipManager.View
+namespace TipManager.Presenter
 {
-    interface ITipManager
+    class AddTipPresenter
     {
-
     }
 }

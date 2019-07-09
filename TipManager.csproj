@@ -80,6 +80,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\TipManagerModel.cs" />
+    <Compile Include="Presenter\AddTipPresenter.cs" />
     <Compile Include="Presenter\HomePresenter.cs" />
     <Compile Include="Presenter\TipManagerPresenter.cs" />
     <Compile Include="Program.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="UserControls\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\IAddTip.cs" />
     <Compile Include="View\IHome.cs" />
     <Compile Include="View\ITipManager.cs" />
     <Compile Include="Withdraw.cs">
