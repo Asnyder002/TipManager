@@ -11,16 +11,19 @@ namespace TipManager.Presenter
 {
     class HomePresenter
     {
-        TipManagerModel tipManager = new TipManagerModel();
+        //TipManagerModel tipManager = new TipManagerModel();
+        TipManagerModel tipManager;
 
         TipManagerServices services;
 
         private IHome homeView;
 
-        public HomePresenter(IHome view)
+        public HomePresenter(IHome view, TipManagerModel tipManager, TipManagerServices services)
         {
             homeView = view;
-            services = new TipManagerServices(tipManager);
+            this.tipManager = tipManager;
+            this.services = services;
+            //services = new TipManagerServices(tipManager);
             homeView.homeLoaded += new EventHandler(OnHomeLoaded);
         }
 
