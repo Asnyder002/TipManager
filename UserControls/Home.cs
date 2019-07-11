@@ -19,7 +19,6 @@ namespace TipManager.UserControls
         public Home()
         {
             InitializeComponent();
-            //new HomePresenter(this);
             
         }
         private void Home_Load(object sender, EventArgs e)

@@ -22,7 +22,6 @@ namespace TipManager
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             form = new Form1();
-            Application.Run(form);
 
             TipManagerModel tipManager = new TipManagerModel();
             TipManagerServices services = new TipManagerServices(tipManager);
@@ -31,7 +30,8 @@ namespace TipManager
             HomePresenter homePresenter = new HomePresenter(homeView, tipManager, services);
 
             form.Controls.Add(homeView);
-            homeView.BringToFront();
+
+            Application.Run(form);
         }
         static Form1 form;
     }
