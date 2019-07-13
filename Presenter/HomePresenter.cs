@@ -11,9 +11,11 @@ namespace TipManager.Presenter
 {
     class HomePresenter
     {
-        TipManagerModel tipManager;
-
-        TipManagerServices services;
+        // Private or nah
+        private TipManagerModel tipManager;
+        
+        // Private or nah
+        private TipManagerServices services;
 
         private IHome homeView;
 

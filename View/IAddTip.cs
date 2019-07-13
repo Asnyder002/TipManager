@@ -8,5 +8,6 @@ namespace TipManager.View
 {
     interface IAddTip
     {
+        event EventHandler clearButtonClicked;
     }
 }

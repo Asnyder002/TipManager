@@ -12,9 +12,12 @@ namespace TipManager.UserControls
 {
     public partial class AddTip : UserControl, IAddTip
     {
+        public event EventHandler clearButtonClicked;
         public AddTip()
         {
             InitializeComponent();
         }
+
+        
     }
 }
