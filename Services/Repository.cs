@@ -43,6 +43,15 @@ namespace TipManager.Services
             }
         }
 
+        public void AddNewDeposit(Deposit deposit)
+        {
+            using (var context = new TipManagerDBEntities())
+            {
+                context.Deposits.Add(deposit);
+                context.SaveChanges();
+            }
+        }
+
 
     }
 }

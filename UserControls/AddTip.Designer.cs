@@ -30,8 +30,8 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tipTextBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dateTextBox = new System.Windows.Forms.TextBox();
+            this.hoursWorkedTextBox = new System.Windows.Forms.TextBox();
             this.tipLabel = new System.Windows.Forms.Label();
             this.dateLabel = new System.Windows.Forms.Label();
             this.hoursWorkedLabel = new System.Windows.Forms.Label();
@@ -58,21 +58,21 @@
             this.tipTextBox.Size = new System.Drawing.Size(167, 27);
             this.tipTextBox.TabIndex = 1;
             // 
-            // textBox1
+            // dateTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(31, 134);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 27);
-            this.textBox1.TabIndex = 2;
+            this.dateTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTextBox.Location = new System.Drawing.Point(31, 134);
+            this.dateTextBox.Name = "dateTextBox";
+            this.dateTextBox.Size = new System.Drawing.Size(167, 27);
+            this.dateTextBox.TabIndex = 2;
             // 
-            // textBox2
+            // hoursWorkedTextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(31, 217);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(167, 27);
-            this.textBox2.TabIndex = 3;
+            this.hoursWorkedTextBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hoursWorkedTextBox.Location = new System.Drawing.Point(31, 217);
+            this.hoursWorkedTextBox.Name = "hoursWorkedTextBox";
+            this.hoursWorkedTextBox.Size = new System.Drawing.Size(167, 27);
+            this.hoursWorkedTextBox.TabIndex = 3;
             // 
             // tipLabel
             // 
@@ -115,6 +115,7 @@
             this.saveButton.TabIndex = 7;
             this.saveButton.Text = "Save";
             this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // deleteButton
             // 
@@ -139,6 +140,7 @@
             this.cancelButton.TabIndex = 9;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = false;
+            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // AddTip
             // 
@@ -151,13 +153,14 @@
             this.Controls.Add(this.hoursWorkedLabel);
             this.Controls.Add(this.dateLabel);
             this.Controls.Add(this.tipLabel);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.hoursWorkedTextBox);
+            this.Controls.Add(this.dateTextBox);
             this.Controls.Add(this.tipTextBox);
             this.Controls.Add(this.dataGridView1);
             this.Location = new System.Drawing.Point(198, 0);
             this.Name = "AddTip";
             this.Size = new System.Drawing.Size(536, 457);
+            this.Load += new System.EventHandler(this.AddTip_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -168,8 +171,8 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox tipTextBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox dateTextBox;
+        private System.Windows.Forms.TextBox hoursWorkedTextBox;
         private System.Windows.Forms.Label tipLabel;
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.Label hoursWorkedLabel;

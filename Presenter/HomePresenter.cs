@@ -19,11 +19,13 @@ namespace TipManager.Presenter
 
         private IHome homeView;
 
+
         public HomePresenter(IHome homeView, TipManagerModel tipManager, TipManagerServices services)
         {
             this.homeView = homeView;
             this.tipManager = tipManager;
             this.services = services;
+
             homeView.homeLoaded += new EventHandler(OnHomeLoaded);
         }
 
@@ -34,26 +36,26 @@ namespace TipManager.Presenter
 
         public void DisplayTotal()
         {
-            services.passTotalToModel();
+            services.PassTotalToModel();
             homeView.TxtTotal = "$" + tipManager.Total.ToString();
 
         }
 
         public void DisplayTotalMade()
         {
-            services.passTotalMadeToModel();
+            services.PassTotalMadeToModel();
             homeView.TxtTotalMade = "$" + tipManager.TotalMade.ToString();
         }
 
         public void DisplayTotalSpent()
         {
-            services.passTotalSpentToModel();
+            services.PassTotalSpentToModel();
             homeView.TxtTotalSpent = "$" + tipManager.TotalSpent.ToString();
         }
 
         public void DisplayTotalHoursWorked()
         {
-            services.passTotalHoursWorkedToModel();
+            services.PassTotalHoursWorkedToModel();
             homeView.TxtTotalHours = tipManager.TotalHours.ToString();
         }
 
