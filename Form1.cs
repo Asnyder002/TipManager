@@ -13,30 +13,28 @@ using TipManager.UserControls;
 
 namespace TipManager
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form, ITipManager
     {
-        //private AddTip addTip;
-        //private AddTipPresenter addTipPresenter;
+        public event EventHandler homeButtonClicked;
+        public event EventHandler addTipButtonClicked;
+        public event EventHandler transactionButtonClicked;
+        public event EventHandler analysisButtonClicked;
 
         public Form1()
         {
             InitializeComponent();
-            //Creates user control;
-            //addTip = new AddTip();
+        }
 
-            //Adds user control
-            //this.Controls.Add(addTip);
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            EventHandler handler = addTipButtonClicked;
+            handler?.Invoke(this, e);
+        }
 
-            //Hides home control
-            //this.homeControl.Hide();
-
-            //Shows AddTip Control
-            //addTip.Show();
-
-            //Creates the AddTipPresenter
-            //addTipPresenter = new AddTipPresenter(addTip);
-
-
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            EventHandler handler = homeButtonClicked;
+            handler?.Invoke(this, e);
         }
 
     }

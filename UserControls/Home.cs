@@ -27,6 +27,11 @@ namespace TipManager.UserControls
             handler?.Invoke(this, e);
         }
 
+        public void BringControlToFront()
+        {
+            this.BringToFront();
+        }
+
         public string TxtTotal { get => totalLabel.Text; set => totalLabel.Text = value; }
         public string TxtTotalMade { get => totalMadeLabel.Text; set => totalMadeLabel.Text = value; }
         public string TxtTotalSpent { get => totalSpentLabel.Text; set => totalSpentLabel.Text = value; }

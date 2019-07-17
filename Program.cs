@@ -27,9 +27,14 @@ namespace TipManager
             TipManagerServices services = new TipManagerServices(tipManager);
 
             Home homeView = new Home();
+            AddTip addTipView = new AddTip();
+
+            TipManagerPresenter tipManagerPresenter = new TipManagerPresenter(form, homeView, addTipView);
             HomePresenter homePresenter = new HomePresenter(homeView, tipManager, services);
+            AddTipPresenter addTipPresenter = new AddTipPresenter(addTipView, tipManager, services);
 
             form.Controls.Add(homeView);
+            form.Controls.Add(addTipView);
 
             Application.Run(form);
         }

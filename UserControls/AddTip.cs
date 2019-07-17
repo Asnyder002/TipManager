@@ -42,5 +42,10 @@ namespace TipManager.UserControls
             EventHandler handler = saveButtonClicked;
             handler?.Invoke(this, e);
         }
+
+        public void BringControlToFront()
+        {
+            this.BringToFront();
+        }
     }
 }

@@ -55,6 +55,7 @@
             this.homeButton.Text = "Home";
             this.homeButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.homeButton.UseVisualStyleBackColor = false;
+            this.homeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // addButton
             // 
@@ -72,6 +73,7 @@
             this.addButton.Text = "Add Tip";
             this.addButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.addButton.UseVisualStyleBackColor = false;
+            this.addButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // subtractButton
             // 
@@ -141,7 +143,7 @@
             this.ClientSize = new System.Drawing.Size(734, 457);
             this.Controls.Add(this.navPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

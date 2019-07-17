@@ -14,10 +14,28 @@ namespace TipManager.Presenter
     class TipManagerPresenter
     {
         private ITipManager tipManagerView;
+        private IHome homeView;
+        private IAddTip addTipView;
 
-        public TipManagerPresenter(ITipManager view)
+        public TipManagerPresenter(ITipManager tipManagerView, IHome homeView, IAddTip addTipView)
         {
-            tipManagerView = view;
+            this.tipManagerView = tipManagerView;
+            this.homeView = homeView;
+            this.addTipView = addTipView;
+            
+
+            tipManagerView.addTipButtonClicked += new EventHandler(OnAddTipButtonClicked);
+            tipManagerView.homeButtonClicked += new EventHandler(OnHomeButtonClicked);
+        }
+
+        public void OnAddTipButtonClicked(object sender, EventArgs e)
+        {
+            addTipView.BringControlToFront();
+        }
+
+        public void OnHomeButtonClicked(object sender, EventArgs e)
+        {
+            homeView.BringControlToFront();
         }
 
     }
