@@ -60,5 +60,14 @@ namespace TipManager.Services
             }
         }
 
+        public Deposit GetSelectedDeposit(Deposit deposit)
+        {
+            using (var context = new TipManagerDBEntities())
+            {
+                return deposit = context.Deposits.Where(x => x.DepositID ==  deposit.DepositID).FirstOrDefault();
+                //Console.WriteLine(deposit.DepositAmount);
+            }
+        }
+
     }
 }

@@ -20,7 +20,7 @@ namespace TipManager.Presenter
 
         private IAddTip addTipView;
 
-        Deposit deposit = new Deposit();
+        private Deposit deposit = new Deposit();
 
         public AddTipPresenter(IAddTip addTipView, TipManagerModel tipManager, TipManagerServices services)
         {
@@ -31,6 +31,7 @@ namespace TipManager.Presenter
             addTipView.clearButtonClicked += new EventHandler(OnClearButtonClicked);
             addTipView.addTipLoaded += new EventHandler(OnAddTipLoaded);
             addTipView.saveButtonClicked += new EventHandler(OnSaveButtonClicked);
+            addTipView.doubleClicked += new EventHandler(OnDoubleClicked);
         }
 
         public void OnClearButtonClicked(object sender, EventArgs e)
@@ -49,8 +50,23 @@ namespace TipManager.Presenter
             deposit.DepositAmount = Decimal.Parse(addTipView.TxtTipAmount.Trim());
             deposit.DepoistDate = DateTime.Parse(addTipView.TxtDate.Trim());
             deposit.HoursWorked = Double.Parse(addTipView.TxtHoursWorked.Trim());
-            services.PassDepositToRepo(deposit);
+            services.PassDepositToRepoToAdd(deposit);
             Clear();
+            LinkDataGridViewForAddTip();
+        }
+
+        public void OnDoubleClicked(object sender, EventArgs e)
+        {
+            
+            if(addTipView.DataGridView.CurrentRow.Index != -1)
+            {
+                deposit.DepositID = Convert.ToInt32(addTipView.DataGridView.CurrentRow.Cells["DepositID"].Value);
+                deposit = services.UpdateSelectedDeposit(deposit);
+                addTipView.TxtTipAmount = deposit.DepositAmount.ToString();
+                addTipView.TxtDate = deposit.DepoistDate.ToShortDateString();
+                addTipView.TxtHoursWorked = deposit.HoursWorked.ToString();
+
+            }
         }
 
         public void Clear()
@@ -63,7 +79,8 @@ namespace TipManager.Presenter
 
         public void LinkDataGridViewForAddTip()
         {
-            addTipView.DataGridView = services.DataSourceForAddTip();
+            addTipView.DataGridView.DataSource = services.DataSourceForAddTip();
         }
+
     }
 }

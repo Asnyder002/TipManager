@@ -15,6 +15,7 @@ namespace TipManager.UserControls
         public event EventHandler clearButtonClicked;
         public event EventHandler addTipLoaded;
         public event EventHandler saveButtonClicked;
+        public event EventHandler doubleClicked;
 
         public AddTip()
         {
@@ -24,7 +25,8 @@ namespace TipManager.UserControls
         public string TxtTipAmount { get => tipTextBox.Text; set => tipTextBox.Text = value; }
         public string TxtDate { get => dateTextBox.Text; set => dateTextBox.Text = value; }
         public string TxtHoursWorked { get => hoursWorkedTextBox.Text; set => hoursWorkedTextBox.Text = value; }
-        public Object DataGridView { get => dataGridViewAddTip.DataSource; set => dataGridViewAddTip.DataSource = value ; }
+        public Object DataGridViewDataSource { get => dataGridViewAddTip.DataSource; set => dataGridViewAddTip.DataSource = value ; }
+        public DataGridView DataGridView { get => dataGridViewAddTip; }
         private void CancelButton_Click(object sender, EventArgs e)
         {
             EventHandler handler = clearButtonClicked;
@@ -46,6 +48,12 @@ namespace TipManager.UserControls
         public void BringControlToFront()
         {
             this.BringToFront();
+        }
+
+        private void DataGridViewAddTip_DoubleClick(object sender, EventArgs e)
+        {
+            EventHandler handler = doubleClicked;
+            handler?.Invoke(this, e);
         }
     }
 }

@@ -48,6 +48,9 @@
             // dataGridViewAddTip
             // 
             this.dataGridViewAddTip.AllowUserToDeleteRows = false;
+            this.dataGridViewAddTip.AllowUserToOrderColumns = true;
+            this.dataGridViewAddTip.AllowUserToResizeColumns = false;
+            this.dataGridViewAddTip.AllowUserToResizeRows = false;
             this.dataGridViewAddTip.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewAddTip.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAddTip.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -60,6 +63,7 @@
             this.dataGridViewAddTip.ReadOnly = true;
             this.dataGridViewAddTip.Size = new System.Drawing.Size(297, 428);
             this.dataGridViewAddTip.TabIndex = 0;
+            this.dataGridViewAddTip.DoubleClick += new System.EventHandler(this.DataGridViewAddTip_DoubleClick);
             // 
             // tipTextBox
             // 
@@ -163,6 +167,7 @@
             // 
             // DepositAmount
             // 
+            this.DepositAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.DepositAmount.DataPropertyName = "DepositAmount";
             this.DepositAmount.HeaderText = "Amount";
             this.DepositAmount.Name = "DepositAmount";
@@ -170,6 +175,7 @@
             // 
             // DepositDate
             // 
+            this.DepositDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.DepositDate.DataPropertyName = "DepoistDate";
             this.DepositDate.HeaderText = "Date";
             this.DepositDate.Name = "DepositDate";
@@ -177,6 +183,7 @@
             // 
             // HoursWorked
             // 
+            this.HoursWorked.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.HoursWorked.DataPropertyName = "HoursWorked";
             this.HoursWorked.HeaderText = "Hours";
             this.HoursWorked.Name = "HoursWorked";

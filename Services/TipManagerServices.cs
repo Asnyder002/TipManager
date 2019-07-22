@@ -37,7 +37,7 @@ namespace TipManager.Services
             tipManager.TotalHours = repo.GetTotalHoursWorked();
         }
 
-        public void PassDepositToRepo(Deposit deposit)
+        public void PassDepositToRepoToAdd(Deposit deposit)
         {
             repo.AddNewDeposit(deposit);
         }
@@ -45,6 +45,11 @@ namespace TipManager.Services
         public List<Deposit> DataSourceForAddTip()
         {
             return repo.GetDataSourceForAddTip();
+        }
+
+        public Deposit UpdateSelectedDeposit(Deposit deposit)
+        {
+            return repo.GetSelectedDeposit(deposit);
         }
     }
 }
