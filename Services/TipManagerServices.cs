@@ -41,5 +41,10 @@ namespace TipManager.Services
         {
             repo.AddNewDeposit(deposit);
         }
+
+        public List<Deposit> DataSourceForAddTip()
+        {
+            return repo.GetDataSourceForAddTip();
+        }
     }
 }

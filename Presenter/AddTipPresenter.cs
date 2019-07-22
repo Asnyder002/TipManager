@@ -35,12 +35,13 @@ namespace TipManager.Presenter
 
         public void OnClearButtonClicked(object sender, EventArgs e)
         {
-            clear();
+            Clear();
         }
 
         public void OnAddTipLoaded(object sender, EventArgs e)
         {
-            clear();
+            Clear();
+            LinkDataGridViewForAddTip();
         }
 
         public void OnSaveButtonClicked(object sneder, EventArgs e)
@@ -49,15 +50,20 @@ namespace TipManager.Presenter
             deposit.DepoistDate = DateTime.Parse(addTipView.TxtDate.Trim());
             deposit.HoursWorked = Double.Parse(addTipView.TxtHoursWorked.Trim());
             services.PassDepositToRepo(deposit);
-            clear();
+            Clear();
         }
 
-        public void clear()
+        public void Clear()
         {
             addTipView.TxtTipAmount = "";
             addTipView.TxtDate = "";
             addTipView.TxtHoursWorked = "";
             deposit.DepositID = 0;
+        }
+
+        public void LinkDataGridViewForAddTip()
+        {
+            addTipView.DataGridView = services.DataSourceForAddTip();
         }
     }
 }

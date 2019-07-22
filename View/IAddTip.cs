@@ -15,6 +15,7 @@ namespace TipManager.View
         string TxtTipAmount { get; set; }
         string TxtDate { get; set; }
         string TxtHoursWorked { get; set; }
+        Object DataGridView { get; set; }
 
         void BringControlToFront();
     }

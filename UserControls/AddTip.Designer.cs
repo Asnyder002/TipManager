@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewAddTip = new System.Windows.Forms.DataGridView();
             this.tipTextBox = new System.Windows.Forms.TextBox();
             this.dateTextBox = new System.Windows.Forms.TextBox();
             this.hoursWorkedTextBox = new System.Windows.Forms.TextBox();
@@ -38,17 +38,28 @@
             this.saveButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.DepositID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepositAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepositDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoursWorked = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddTip)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewAddTip
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(225, 15);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(297, 428);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewAddTip.AllowUserToDeleteRows = false;
+            this.dataGridViewAddTip.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewAddTip.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAddTip.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DepositID,
+            this.DepositAmount,
+            this.DepositDate,
+            this.HoursWorked});
+            this.dataGridViewAddTip.Location = new System.Drawing.Point(225, 15);
+            this.dataGridViewAddTip.Name = "dataGridViewAddTip";
+            this.dataGridViewAddTip.ReadOnly = true;
+            this.dataGridViewAddTip.Size = new System.Drawing.Size(297, 428);
+            this.dataGridViewAddTip.TabIndex = 0;
             // 
             // tipTextBox
             // 
@@ -142,6 +153,35 @@
             this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
+            // DepositID
+            // 
+            this.DepositID.DataPropertyName = "DepositID";
+            this.DepositID.HeaderText = "DepositID";
+            this.DepositID.Name = "DepositID";
+            this.DepositID.ReadOnly = true;
+            this.DepositID.Visible = false;
+            // 
+            // DepositAmount
+            // 
+            this.DepositAmount.DataPropertyName = "DepositAmount";
+            this.DepositAmount.HeaderText = "Amount";
+            this.DepositAmount.Name = "DepositAmount";
+            this.DepositAmount.ReadOnly = true;
+            // 
+            // DepositDate
+            // 
+            this.DepositDate.DataPropertyName = "DepoistDate";
+            this.DepositDate.HeaderText = "Date";
+            this.DepositDate.Name = "DepositDate";
+            this.DepositDate.ReadOnly = true;
+            // 
+            // HoursWorked
+            // 
+            this.HoursWorked.DataPropertyName = "HoursWorked";
+            this.HoursWorked.HeaderText = "Hours";
+            this.HoursWorked.Name = "HoursWorked";
+            this.HoursWorked.ReadOnly = true;
+            // 
             // AddTip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -156,12 +196,12 @@
             this.Controls.Add(this.hoursWorkedTextBox);
             this.Controls.Add(this.dateTextBox);
             this.Controls.Add(this.tipTextBox);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewAddTip);
             this.Location = new System.Drawing.Point(198, 0);
             this.Name = "AddTip";
             this.Size = new System.Drawing.Size(536, 457);
             this.Load += new System.EventHandler(this.AddTip_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddTip)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,7 +209,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewAddTip;
         private System.Windows.Forms.TextBox tipTextBox;
         private System.Windows.Forms.TextBox dateTextBox;
         private System.Windows.Forms.TextBox hoursWorkedTextBox;
@@ -179,5 +219,9 @@
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DepositID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DepositAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DepositDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoursWorked;
     }
 }

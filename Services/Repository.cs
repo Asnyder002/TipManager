@@ -52,6 +52,13 @@ namespace TipManager.Services
             }
         }
 
+        public List<Deposit> GetDataSourceForAddTip()
+        {
+            using (var context = new TipManagerDBEntities())
+            {
+                return context.Deposits.ToList<Deposit>();
+            }
+        }
 
     }
 }
