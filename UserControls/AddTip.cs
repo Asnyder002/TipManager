@@ -16,6 +16,7 @@ namespace TipManager.UserControls
         public event EventHandler addTipLoaded;
         public event EventHandler saveButtonClicked;
         public event EventHandler doubleClicked;
+        public event EventHandler deleteButtonClicked;
 
         public AddTip()
         {
@@ -53,6 +54,12 @@ namespace TipManager.UserControls
         private void DataGridViewAddTip_DoubleClick(object sender, EventArgs e)
         {
             EventHandler handler = doubleClicked;
+            handler?.Invoke(this, e);
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            EventHandler handler = deleteButtonClicked;
             handler?.Invoke(this, e);
         }
     }

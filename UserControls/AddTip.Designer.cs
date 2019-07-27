@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.dataGridViewAddTip = new System.Windows.Forms.DataGridView();
+            this.DepositID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepositAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepositDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoursWorked = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipTextBox = new System.Windows.Forms.TextBox();
             this.dateTextBox = new System.Windows.Forms.TextBox();
             this.hoursWorkedTextBox = new System.Windows.Forms.TextBox();
@@ -38,10 +42,6 @@
             this.saveButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.DepositID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DepositAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DepositDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoursWorked = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddTip)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +64,38 @@
             this.dataGridViewAddTip.Size = new System.Drawing.Size(297, 428);
             this.dataGridViewAddTip.TabIndex = 0;
             this.dataGridViewAddTip.DoubleClick += new System.EventHandler(this.DataGridViewAddTip_DoubleClick);
+            // 
+            // DepositID
+            // 
+            this.DepositID.DataPropertyName = "DepositID";
+            this.DepositID.HeaderText = "DepositID";
+            this.DepositID.Name = "DepositID";
+            this.DepositID.ReadOnly = true;
+            this.DepositID.Visible = false;
+            // 
+            // DepositAmount
+            // 
+            this.DepositAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DepositAmount.DataPropertyName = "DepositAmount";
+            this.DepositAmount.HeaderText = "Amount";
+            this.DepositAmount.Name = "DepositAmount";
+            this.DepositAmount.ReadOnly = true;
+            // 
+            // DepositDate
+            // 
+            this.DepositDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DepositDate.DataPropertyName = "DepoistDate";
+            this.DepositDate.HeaderText = "Date";
+            this.DepositDate.Name = "DepositDate";
+            this.DepositDate.ReadOnly = true;
+            // 
+            // HoursWorked
+            // 
+            this.HoursWorked.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HoursWorked.DataPropertyName = "HoursWorked";
+            this.HoursWorked.HeaderText = "Hours";
+            this.HoursWorked.Name = "HoursWorked";
+            this.HoursWorked.ReadOnly = true;
             // 
             // tipTextBox
             // 
@@ -143,6 +175,7 @@
             this.deleteButton.TabIndex = 8;
             this.deleteButton.Text = "Delete";
             this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // cancelButton
             // 
@@ -156,38 +189,6 @@
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = false;
             this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
-            // 
-            // DepositID
-            // 
-            this.DepositID.DataPropertyName = "DepositID";
-            this.DepositID.HeaderText = "DepositID";
-            this.DepositID.Name = "DepositID";
-            this.DepositID.ReadOnly = true;
-            this.DepositID.Visible = false;
-            // 
-            // DepositAmount
-            // 
-            this.DepositAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DepositAmount.DataPropertyName = "DepositAmount";
-            this.DepositAmount.HeaderText = "Amount";
-            this.DepositAmount.Name = "DepositAmount";
-            this.DepositAmount.ReadOnly = true;
-            // 
-            // DepositDate
-            // 
-            this.DepositDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DepositDate.DataPropertyName = "DepoistDate";
-            this.DepositDate.HeaderText = "Date";
-            this.DepositDate.Name = "DepositDate";
-            this.DepositDate.ReadOnly = true;
-            // 
-            // HoursWorked
-            // 
-            this.HoursWorked.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HoursWorked.DataPropertyName = "HoursWorked";
-            this.HoursWorked.HeaderText = "Hours";
-            this.HoursWorked.Name = "HoursWorked";
-            this.HoursWorked.ReadOnly = true;
             // 
             // AddTip
             // 

@@ -37,9 +37,16 @@ namespace TipManager.Services
             tipManager.TotalHours = repo.GetTotalHoursWorked();
         }
 
+        // Refactor?
         public void PassDepositToRepoToAdd(Deposit deposit)
         {
             repo.AddNewDeposit(deposit);
+        }
+
+        // Refactor?
+        public void PassDepositToRepoToDelete(Deposit deposit)
+        {
+            repo.DeleteDeposit(deposit);
         }
 
         public List<Deposit> DataSourceForAddTip()

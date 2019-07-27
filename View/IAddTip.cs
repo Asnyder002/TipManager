@@ -11,6 +11,7 @@ namespace TipManager.View
     {
         event EventHandler clearButtonClicked;
         event EventHandler saveButtonClicked;
+        event EventHandler deleteButtonClicked;
         event EventHandler addTipLoaded;
         event EventHandler doubleClicked;
 

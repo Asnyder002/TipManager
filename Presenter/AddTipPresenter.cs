@@ -32,6 +32,7 @@ namespace TipManager.Presenter
             addTipView.addTipLoaded += new EventHandler(OnAddTipLoaded);
             addTipView.saveButtonClicked += new EventHandler(OnSaveButtonClicked);
             addTipView.doubleClicked += new EventHandler(OnDoubleClicked);
+            addTipView.deleteButtonClicked += new EventHandler(OnDeleteButtonClicked);
         }
 
         public void OnClearButtonClicked(object sender, EventArgs e)
@@ -47,12 +48,19 @@ namespace TipManager.Presenter
 
         public void OnSaveButtonClicked(object sneder, EventArgs e)
         {
-            deposit.DepositAmount = Decimal.Parse(addTipView.TxtTipAmount.Trim());
-            deposit.DepoistDate = DateTime.Parse(addTipView.TxtDate.Trim());
-            deposit.HoursWorked = Double.Parse(addTipView.TxtHoursWorked.Trim());
-            services.PassDepositToRepoToAdd(deposit);
-            Clear();
-            LinkDataGridViewForAddTip();
+            try
+            {
+                deposit.DepositAmount = Decimal.Parse(addTipView.TxtTipAmount.Trim());
+                deposit.DepoistDate = DateTime.Parse(addTipView.TxtDate.Trim());
+                deposit.HoursWorked = Double.Parse(addTipView.TxtHoursWorked.Trim());
+                services.PassDepositToRepoToAdd(deposit);
+                Clear();
+                LinkDataGridViewForAddTip();
+            }
+            catch
+            {
+
+            }
         }
 
         public void OnDoubleClicked(object sender, EventArgs e)
@@ -67,6 +75,13 @@ namespace TipManager.Presenter
                 addTipView.TxtHoursWorked = deposit.HoursWorked.ToString();
 
             }
+        }
+
+        public void OnDeleteButtonClicked(object sender, EventArgs e)
+        {
+            services.PassDepositToRepoToDelete(deposit);
+            LinkDataGridViewForAddTip();
+            Clear();
         }
 
         public void Clear()

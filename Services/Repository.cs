@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace TipManager.Services
 {
@@ -43,14 +44,46 @@ namespace TipManager.Services
             }
         }
 
+        // This will need to be refactored
         public void AddNewDeposit(Deposit deposit)
         {
             using (var context = new TipManagerDBEntities())
             {
-                context.Deposits.Add(deposit);
+                if (deposit.DepositID == 0)
+                {
+                    context.Deposits.Add(deposit);
+                }
+                else
+                {
+                    context.Entry(deposit).State = EntityState.Modified;
+                }
+                
                 context.SaveChanges();
             }
         }
+
+        public void DeleteDeposit(Deposit deposit)
+        {
+            using (var context = new TipManagerDBEntities())
+            {
+                try
+                {
+                    var entry = context.Entry(deposit);
+                    if (entry.State == EntityState.Detached)
+                    {
+                        context.Deposits.Attach(deposit);
+                    }
+                    context.Deposits.Remove(deposit);
+                    context.SaveChanges();
+                }
+                catch
+                {
+
+                }
+                
+            }
+        }
+
 
         public List<Deposit> GetDataSourceForAddTip()
         {
@@ -65,7 +98,6 @@ namespace TipManager.Services
             using (var context = new TipManagerDBEntities())
             {
                 return deposit = context.Deposits.Where(x => x.DepositID ==  deposit.DepositID).FirstOrDefault();
-                //Console.WriteLine(deposit.DepositAmount);
             }
         }
 
