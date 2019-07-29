@@ -15,7 +15,6 @@ namespace TipManager.UserControls
     public partial class Home : UserControl, IHome
     {
         public event EventHandler homeLoaded;
-        public event EventHandler refreshed;
 
         public Home()
         {

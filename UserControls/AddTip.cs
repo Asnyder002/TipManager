@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TipManager.View;
+
 namespace TipManager.UserControls
 {
     public partial class AddTip : UserControl, IAddTip
@@ -26,8 +27,9 @@ namespace TipManager.UserControls
         public string TxtTipAmount { get => tipTextBox.Text; set => tipTextBox.Text = value; }
         public string TxtDate { get => dateTextBox.Text; set => dateTextBox.Text = value; }
         public string TxtHoursWorked { get => hoursWorkedTextBox.Text; set => hoursWorkedTextBox.Text = value; }
-        public Object DataGridViewDataSource { get => dataGridViewAddTip.DataSource; set => dataGridViewAddTip.DataSource = value ; }
+        public Object DataGridViewDataSource { get => dataGridViewAddTip.DataSource; set => dataGridViewAddTip.DataSource = value; }
         public DataGridView DataGridView { get => dataGridViewAddTip; }
+
         private void CancelButton_Click(object sender, EventArgs e)
         {
             EventHandler handler = clearButtonClicked;

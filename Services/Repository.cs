@@ -92,6 +92,24 @@ namespace TipManager.Services
             }
         }
 
+        // This will need to be refactored
+        public void AddNewWithdraw(Withdraw withdraw)
+        {
+            using (var context = new TipManagerDBEntities())
+            {
+                if (withdraw.WithdrawID == 0)
+                {
+                    context.Withdraws.Add(withdraw);
+                }
+                else
+                {
+                    context.Entry(withdraw).State = EntityState.Modified;
+                }
+
+                context.SaveChanges();
+            }
+        }
+
         public void DeleteDeposit(Deposit deposit)
         {
             using (var context = new TipManagerDBEntities())
@@ -110,7 +128,27 @@ namespace TipManager.Services
                 {
 
                 }
-                
+            }
+        }
+
+        public void DeleteWithdraw(Withdraw withdraw)
+        {
+            using (var context = new TipManagerDBEntities())
+            {
+                try
+                {
+                    var entry = context.Entry(withdraw);
+                    if (entry.State == EntityState.Detached)
+                    {
+                        context.Withdraws.Attach(withdraw);
+                    }
+                    context.Withdraws.Remove(withdraw);
+                    context.SaveChanges();
+                }
+                catch
+                {
+
+                }
             }
         }
 
@@ -123,11 +161,27 @@ namespace TipManager.Services
             }
         }
 
+        public List<Withdraw> GetDataSourceForWithdraw()
+        {
+            using (var context = new TipManagerDBEntities())
+            {
+                return context.Withdraws.ToList<Withdraw>();
+            }
+        }
+
         public Deposit GetSelectedDeposit(Deposit deposit)
         {
             using (var context = new TipManagerDBEntities())
             {
                 return deposit = context.Deposits.Where(x => x.DepositID ==  deposit.DepositID).FirstOrDefault();
+            }
+        }
+
+        public Withdraw GetSelectedWithdraw(Withdraw withdraw)
+        {
+            using (var context = new TipManagerDBEntities())
+            {
+                return withdraw = context.Withdraws.Where(x => x.WithdrawID == withdraw.WithdrawID).FirstOrDefault();
             }
         }
 

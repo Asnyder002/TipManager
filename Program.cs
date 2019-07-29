@@ -28,13 +28,16 @@ namespace TipManager
 
             Home homeView = new Home();
             AddTip addTipView = new AddTip();
+            Transaction transactionView = new Transaction();
 
-            TipManagerPresenter tipManagerPresenter = new TipManagerPresenter(form, homeView, addTipView);
+            TipManagerPresenter tipManagerPresenter = new TipManagerPresenter(form, homeView, addTipView, transactionView);
             HomePresenter homePresenter = new HomePresenter(homeView, tipManager, services);
             AddTipPresenter addTipPresenter = new AddTipPresenter(addTipView, tipManager, services);
+            TransactionPresenter withdrawPresenter = new TransactionPresenter(transactionView, tipManager, services);
 
             form.Controls.Add(homeView);
             form.Controls.Add(addTipView);
+            form.Controls.Add(transactionView);
 
             Application.Run(form);
         }

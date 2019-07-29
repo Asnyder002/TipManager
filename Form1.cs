@@ -37,5 +37,10 @@ namespace TipManager
             handler?.Invoke(this, e);
         }
 
+        private void SubtractButton_Click(object sender, EventArgs e)
+        {
+            EventHandler handler = transactionButtonClicked;
+            handler?.Invoke(this, e);
+        }
     }
 }

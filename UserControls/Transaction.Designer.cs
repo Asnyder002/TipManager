@@ -1,6 +1,6 @@
 ﻿namespace TipManager.UserControls
 {
-    partial class Withdraw
+    partial class Transaction
     {
         /// <summary> 
         /// Required designer variable.
@@ -38,10 +38,10 @@
             this.withdrawDateTextBox = new System.Windows.Forms.TextBox();
             this.spentTextBox = new System.Windows.Forms.TextBox();
             this.dataGridViewWithdraw = new System.Windows.Forms.DataGridView();
-            this.DepositID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DepositAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DepositDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoursWorked = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WithdrawID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WithdrawAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WithdrawDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WithdrawName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWithdraw)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +56,7 @@
             this.cancelButtonWithdraw.TabIndex = 19;
             this.cancelButtonWithdraw.Text = "Cancel";
             this.cancelButtonWithdraw.UseVisualStyleBackColor = false;
+            this.cancelButtonWithdraw.Click += new System.EventHandler(this.CancelButtonWithdraw_Click);
             // 
             // deleteButtonWithdraw
             // 
@@ -68,6 +69,7 @@
             this.deleteButtonWithdraw.TabIndex = 18;
             this.deleteButtonWithdraw.Text = "Delete";
             this.deleteButtonWithdraw.UseVisualStyleBackColor = false;
+            this.deleteButtonWithdraw.Click += new System.EventHandler(this.DeleteButtonWithdraw_Click);
             // 
             // saveButtonWithdraw
             // 
@@ -80,6 +82,7 @@
             this.saveButtonWithdraw.TabIndex = 17;
             this.saveButtonWithdraw.Text = "Save";
             this.saveButtonWithdraw.UseVisualStyleBackColor = false;
+            this.saveButtonWithdraw.Click += new System.EventHandler(this.SaveButtonWithdraw_Click);
             // 
             // categoryLabel
             // 
@@ -144,47 +147,47 @@
             this.dataGridViewWithdraw.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewWithdraw.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewWithdraw.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DepositID,
-            this.DepositAmount,
-            this.DepositDate,
-            this.HoursWorked});
+            this.WithdrawID,
+            this.WithdrawAmount,
+            this.WithdrawDate,
+            this.WithdrawName});
             this.dataGridViewWithdraw.Location = new System.Drawing.Point(225, 15);
             this.dataGridViewWithdraw.Name = "dataGridViewWithdraw";
             this.dataGridViewWithdraw.ReadOnly = true;
             this.dataGridViewWithdraw.Size = new System.Drawing.Size(297, 428);
             this.dataGridViewWithdraw.TabIndex = 10;
             // 
-            // DepositID
+            // WithdrawID
             // 
-            this.DepositID.DataPropertyName = "DepositID";
-            this.DepositID.HeaderText = "DepositID";
-            this.DepositID.Name = "DepositID";
-            this.DepositID.ReadOnly = true;
-            this.DepositID.Visible = false;
+            this.WithdrawID.DataPropertyName = "WithdrawID";
+            this.WithdrawID.HeaderText = "WithdrawID";
+            this.WithdrawID.Name = "WithdrawID";
+            this.WithdrawID.ReadOnly = true;
+            this.WithdrawID.Visible = false;
             // 
-            // DepositAmount
+            // WithdrawAmount
             // 
-            this.DepositAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DepositAmount.DataPropertyName = "DepositAmount";
-            this.DepositAmount.HeaderText = "Amount";
-            this.DepositAmount.Name = "DepositAmount";
-            this.DepositAmount.ReadOnly = true;
+            this.WithdrawAmount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.WithdrawAmount.DataPropertyName = "WithdrawAmount";
+            this.WithdrawAmount.HeaderText = "Spent";
+            this.WithdrawAmount.Name = "WithdrawAmount";
+            this.WithdrawAmount.ReadOnly = true;
             // 
-            // DepositDate
+            // WithdrawDate
             // 
-            this.DepositDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DepositDate.DataPropertyName = "DepoistDate";
-            this.DepositDate.HeaderText = "Date";
-            this.DepositDate.Name = "DepositDate";
-            this.DepositDate.ReadOnly = true;
+            this.WithdrawDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.WithdrawDate.DataPropertyName = "WithdrawDate";
+            this.WithdrawDate.HeaderText = "Date";
+            this.WithdrawDate.Name = "WithdrawDate";
+            this.WithdrawDate.ReadOnly = true;
             // 
-            // HoursWorked
+            // WithdrawName
             // 
-            this.HoursWorked.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HoursWorked.DataPropertyName = "HoursWorked";
-            this.HoursWorked.HeaderText = "Hours";
-            this.HoursWorked.Name = "HoursWorked";
-            this.HoursWorked.ReadOnly = true;
+            this.WithdrawName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.WithdrawName.DataPropertyName = "WithdrawName";
+            this.WithdrawName.HeaderText = "Category";
+            this.WithdrawName.Name = "WithdrawName";
+            this.WithdrawName.ReadOnly = true;
             // 
             // Withdraw
             // 
@@ -204,6 +207,7 @@
             this.Location = new System.Drawing.Point(198, 0);
             this.Name = "Withdraw";
             this.Size = new System.Drawing.Size(536, 457);
+            this.Load += new System.EventHandler(this.Withdraw_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWithdraw)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -222,9 +226,9 @@
         private System.Windows.Forms.TextBox withdrawDateTextBox;
         private System.Windows.Forms.TextBox spentTextBox;
         private System.Windows.Forms.DataGridView dataGridViewWithdraw;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DepositID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DepositAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DepositDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoursWorked;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WithdrawID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WithdrawAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WithdrawDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn WithdrawName;
     }
 }

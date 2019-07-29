@@ -43,10 +43,20 @@ namespace TipManager.Services
             repo.AddNewDeposit(deposit);
         }
 
+        public void PassWithdrawToRepoToAdd(Withdraw withdraw)
+        {
+            repo.AddNewWithdraw(withdraw);
+        }
+
         // Refactor?
         public void PassDepositToRepoToDelete(Deposit deposit)
         {
             repo.DeleteDeposit(deposit);
+        }
+
+        public void PassWithdrawToRepoToDelete(Withdraw withdraw)
+        {
+            repo.DeleteWithdraw(withdraw);
         }
 
         public List<Deposit> DataSourceForAddTip()
@@ -54,9 +64,19 @@ namespace TipManager.Services
             return repo.GetDataSourceForAddTip();
         }
 
+        public List<Withdraw> DataSourceForWithdraw()
+        {
+            return repo.GetDataSourceForWithdraw();
+        }
+
         public Deposit UpdateSelectedDeposit(Deposit deposit)
         {
             return repo.GetSelectedDeposit(deposit);
+        }
+
+        public Withdraw UpdateSelectedWithdraw(Withdraw withdraw)
+        {
+            return repo.GetSelectedWithdraw(withdraw);
         }
     }
 }

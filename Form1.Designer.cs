@@ -91,6 +91,7 @@
             this.subtractButton.Text = "Transaction";
             this.subtractButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.subtractButton.UseVisualStyleBackColor = false;
+            this.subtractButton.Click += new System.EventHandler(this.SubtractButton_Click);
             // 
             // analysisButton
             // 
