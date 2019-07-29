@@ -15,6 +15,7 @@ namespace TipManager.UserControls
     public partial class Home : UserControl, IHome
     {
         public event EventHandler homeLoaded;
+        public event EventHandler refreshed;
 
         public Home()
         {
@@ -31,6 +32,7 @@ namespace TipManager.UserControls
         {
             this.BringToFront();
         }
+
 
         public string TxtTotal { get => totalLabel.Text; set => totalLabel.Text = value; }
         public string TxtTotalMade { get => totalMadeLabel.Text; set => totalMadeLabel.Text = value; }

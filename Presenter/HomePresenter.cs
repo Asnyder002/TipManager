@@ -29,6 +29,7 @@ namespace TipManager.Presenter
             homeView.homeLoaded += new EventHandler(OnHomeLoaded);
         }
 
+        // Refactor
         public void OnHomeLoaded(object sender, EventArgs e)
         {
             DisplayAll();

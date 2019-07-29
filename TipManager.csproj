@@ -99,6 +99,12 @@
     <Compile Include="UserControls\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Withdraw.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Withdraw.Designer.cs">
+      <DependentUpon>Withdraw.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\IAddTip.cs" />
     <Compile Include="View\IHome.cs" />
     <Compile Include="View\ITipManager.cs" />
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Withdraw.resx">
+      <DependentUpon>Withdraw.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="DBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

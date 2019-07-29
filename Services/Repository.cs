@@ -13,7 +13,15 @@ namespace TipManager.Services
         {
             using(var context = new TipManagerDBEntities())
             {
-                return GetTotalMade() - GetTotalSpent();
+                try
+                {
+                    return GetTotalMade() - GetTotalSpent();
+                }
+                catch
+                {
+                    return 0;
+                }
+                
             }
         }
 
@@ -21,8 +29,16 @@ namespace TipManager.Services
         {
             using (var context = new TipManagerDBEntities())
             {
-                double sum = (double)context.Deposits.Sum(d => d.DepositAmount);
-                return sum;
+                try
+                {
+                    double sum = (double)context.Deposits.Sum(d => d.DepositAmount);
+                    return sum;
+                }
+                catch
+                {
+                    return 0;
+                }
+                
             }
         }
 
@@ -30,8 +46,15 @@ namespace TipManager.Services
         {
             using (var context = new TipManagerDBEntities())
             {
-                double sum = (double)context.Withdraws.Sum(d => d.WithdrawAmount);
-                return sum;
+                try
+                {
+                    double sum = (double)context.Withdraws.Sum(d => d.WithdrawAmount);
+                    return sum;
+                }
+                catch
+                {
+                    return 0;
+                }
             }
         }
 
@@ -39,8 +62,15 @@ namespace TipManager.Services
         {
             using (var context = new TipManagerDBEntities())
             {
-                double sum = context.Deposits.Sum(d => d.HoursWorked);
-                return sum;
+                try
+                {
+                    double sum = context.Deposits.Sum(d => d.HoursWorked);
+                    return sum;
+                }
+                catch
+                {
+                    return 0;
+                }
             }
         }
 

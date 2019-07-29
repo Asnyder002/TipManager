@@ -15,3 +15,4 @@ C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.csproj.CoreCompileInp
 C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.csproj.CopyComplete
 C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.exe
 C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.pdb
+C:\Users\Adam\source\repos\TipManager\obj\Debug\TipManager.UserControls.Withdraw.resources

@@ -135,7 +135,7 @@
             // 
             this.dateLabel.AutoSize = true;
             this.dateLabel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateLabel.Location = new System.Drawing.Point(84, 103);
+            this.dateLabel.Location = new System.Drawing.Point(87, 103);
             this.dateLabel.Name = "dateLabel";
             this.dateLabel.Size = new System.Drawing.Size(54, 18);
             this.dateLabel.TabIndex = 5;
