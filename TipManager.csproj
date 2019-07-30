@@ -107,6 +107,7 @@
       <DependentUpon>Transaction.cs</DependentUpon>
     </Compile>
     <Compile Include="View\IAddTip.cs" />
+    <Compile Include="View\IAnalysis.cs" />
     <Compile Include="View\IHome.cs" />
     <Compile Include="View\ITipManager.cs" />
     <Compile Include="View\ITransaction.cs" />
