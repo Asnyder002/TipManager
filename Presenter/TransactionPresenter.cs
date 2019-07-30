@@ -62,7 +62,7 @@ namespace TipManager.Presenter
 
             if (withdrawView.DataGridView.CurrentRow.Index != -1)
             {
-                withdraw.WithdrawID = Convert.ToInt32(withdrawView.DataGridView.CurrentRow.Cells["DepositID"].Value);
+                withdraw.WithdrawID = Convert.ToInt32(withdrawView.DataGridView.CurrentRow.Cells["withdrawID"].Value);
                 withdraw = services.UpdateSelectedWithdraw(withdraw);
                 withdrawView.TxtWithdrawAmount = withdraw.WithdrawAmount.ToString();
                 withdrawView.TxtWithdrawDate = withdraw.WithdrawDate.ToShortDateString();

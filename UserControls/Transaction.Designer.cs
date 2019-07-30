@@ -156,6 +156,7 @@
             this.dataGridViewWithdraw.ReadOnly = true;
             this.dataGridViewWithdraw.Size = new System.Drawing.Size(297, 428);
             this.dataGridViewWithdraw.TabIndex = 10;
+            this.dataGridViewWithdraw.DoubleClick += new System.EventHandler(this.DataGridViewWithdraw_DoubleClick);
             // 
             // WithdrawID
             // 
@@ -189,7 +190,7 @@
             this.WithdrawName.Name = "WithdrawName";
             this.WithdrawName.ReadOnly = true;
             // 
-            // Withdraw
+            // Transaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -205,7 +206,7 @@
             this.Controls.Add(this.spentTextBox);
             this.Controls.Add(this.dataGridViewWithdraw);
             this.Location = new System.Drawing.Point(198, 0);
-            this.Name = "Withdraw";
+            this.Name = "Transaction";
             this.Size = new System.Drawing.Size(536, 457);
             this.Load += new System.EventHandler(this.Withdraw_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewWithdraw)).EndInit();

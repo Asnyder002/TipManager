@@ -59,5 +59,11 @@ namespace TipManager.UserControls
             EventHandler handler = withdrawLoaded;
             handler?.Invoke(this, e);
         }
+
+        private void DataGridViewWithdraw_DoubleClick(object sender, EventArgs e)
+        {
+            EventHandler handler = withdrawDoubleClicked;
+            handler?.Invoke(this, e);
+        }
     }
 }
